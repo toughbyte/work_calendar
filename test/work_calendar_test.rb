@@ -5,15 +5,15 @@ require 'date'
 
 class WorkCalendarTest < Minitest::Test
   def test_that_it_has_a_version_number
-    assert_not_nil ::WorkCalendar::VERSION
+    refute_nil ::WorkCalendar::VERSION
   end
 
   def test_workday_method
     assert WorkCalendar.workday?(Date.new(2018, 12, 29))
-    assert_not WorkCalendar.workday?(Date.new(2018, 12, 30))
-    assert_not WorkCalendar.workday?(Date.new(2018, 12, 31))
+    refute WorkCalendar.workday?(Date.new(2018, 12, 30))
+    refute WorkCalendar.workday?(Date.new(2018, 12, 31))
     assert WorkCalendar.workday?(Date.new(2019, 2, 1))
-    assert_not WorkCalendar.workday?(Date.new(2019, 6, 12))
+    refute WorkCalendar.workday?(Date.new(2019, 6, 12))
   end
 
   def test_next_workday_method

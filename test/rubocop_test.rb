@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class RubocopTest < Minitest::Test
-  #   def initialize test
+  #   def initialize(_name)
   #     modified = `git diff master --name-only`
   #     untracked = `git ls-files --others --exclude-standard`
   #     excluded = Dir.glob('bin/*')
