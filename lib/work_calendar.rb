@@ -1,6 +1,88 @@
-require "work_calendar/version"
+# frozen_string_literal: true
+
+require 'work_calendar/version'
+require 'active_support/time'
 
 module WorkCalendar
-  class Error < StandardError; end
-  # Your code goes here...
+  SPECIAL_DAYS = {
+    2018 => {
+      12 => {
+        workdays: [29],
+        holidays: [31]
+      }
+    },
+    2019 => {
+      1 => {
+        holidays: [1, 2, 3, 4, 7, 8]
+      },
+      3 => {
+        holidays: [8]
+      },
+      5 => {
+        holidays: [1, 2, 3, 9, 10]
+      },
+      6 => {
+        holidays: [12]
+      },
+      11 => {
+        holidays: [4]
+      }
+    },
+    2020 => {
+      1 => {
+        holidays: [1, 2, 3, 6, 7, 8]
+      },
+      2 => {
+        holidays: [24]
+      },
+      3 => {
+        holidays: [9]
+      },
+      5 => {
+        holidays: [1, 4, 5, 11]
+      },
+      6 => {
+        holidays: [12]
+      },
+      11 => {
+        holidays: [4]
+      }
+    }
+  }.freeze
+
+  class << self
+    def workday?(date = Time.zone.today)
+      year_hash = SPECIAL_DAYS[date.year]
+      if year_hash
+        month_hash = year_hash[date.month]
+        if month_hash
+          holidays = month_hash[:holidays]
+          return false if holidays&.include?(date.day)
+
+          workdays = month_hash[:workdays]
+          return true if workdays&.include?(date.day)
+        end
+      end
+      (1..5).cover?(date.wday)
+    end
+
+    def next_workday(num = 1, date = Time.zone.today)
+      num.times { date = _next_workday(date) }
+      date
+    end
+
+    def prev_workday(date = Time.zone.today)
+      prev_date = date - 1.day
+      prev_date -= 1.day until workday? prev_date
+      prev_date
+    end
+
+    private
+
+    def _next_workday(date)
+      next_date = date + 1.day
+      next_date += 1.day until workday? next_date
+      next_date
+    end
+  end
 end

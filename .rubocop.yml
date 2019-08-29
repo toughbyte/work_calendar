@@ -1,0 +1,59 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 2.6.2
+  DisplayCopNames: true
+  Exclude:
+    - "vendor/**/*"
+    - "db/data_schema.rb"
+    - "bin/*"
+    - "node_modules/**/*"
+
+Style/DocumentationMethod:
+  RequireForNonPublicMethods: false
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 100
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Naming/UncommunicativeMethodParamName:
+  AllowedNames: [io, id, to, by, on, in, at, ip, db, cv]
+
+Rails:
+  Enabled: true
+
+Rails/Delegate:
+  Enabled: false
+
+# Disable metrics cops
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
