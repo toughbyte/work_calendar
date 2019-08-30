@@ -1,8 +1,6 @@
 # WorkCalendar
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/work_calendar`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Simple yet effective gem for calculating workday `Time` objects.
 
 ## Installation
 
@@ -22,13 +20,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Check if specified date is workday. If no `date` parameter was passed it checks current day:
 
-## Development
+```ruby
+WorkCalendar.workday?(date)
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Get next `n`'th workday date relative to specified date; if no `date` parameter was passed, it returns value relative to current day; if no `n` parameter was passed, it defaults to first next workday:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```ruby
+WorkCalendar.next_workday(n, date)
+```
+
+Works the same as `next_workday`, only looking backwards instead:
+
+```ruby
+WorkCalendar.prev_workday(n, date)
+```
+
 
 ## Contributing
 
