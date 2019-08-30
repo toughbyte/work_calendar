@@ -10,16 +10,13 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Sergey Tomashevsky']
   spec.email         = ['sergey.tomashevsky@toughbyte.com']
 
-  spec.summary       = 'Placeholder'
-  spec.description   = 'Placeholder'
-  spec.homepage      = 'https://toughbyte.com'
+  spec.summary       = 'Workday calculator'
+  spec.description   = 'Simple yet effective gem for calculating workday Time objects.'
+  spec.homepage      = 'https://github.com/toughbyte/work_calendar'
   spec.license       = 'MIT'
 
-  spec.metadata['allowed_push_host'] = 'https://toughbyte.com'
-
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://toughbyte.com'
-  spec.metadata['changelog_uri'] = 'https://toughbyte.com'
+  spec.metadata['source_code_uri'] = 'https://github.com/toughbyte/work_calendar'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -30,10 +27,10 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'activesupport'
+  spec.add_development_dependency 'activesupport', '~>6.0'
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'minitest', '~> 5.0'
   spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'rubocop-performance'
+  spec.add_development_dependency 'rubocop', '~>0.71'
+  spec.add_development_dependency 'rubocop-performance', '~>1.3.0'
 end
