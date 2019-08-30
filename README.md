@@ -39,9 +39,6 @@ WorkCalendar.prev_workday(n, date)
 ```
 
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/work_calendar.
 
 ## License
 
