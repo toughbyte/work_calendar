@@ -7,13 +7,13 @@ require 'work_calendar/version'
 Gem::Specification.new do |spec|
   spec.name          = 'work_calendar'
   spec.version       = WorkCalendar::VERSION
-  spec.authors       = ['Sergey Tomashevsky']
-  spec.email         = ['sergey.tomashevsky@toughbyte.com']
+  spec.authors       = ['Anton Korenyushkin', 'Sergey Tomashevsky']
+  spec.email         = ['hello@toughbyte.com']
 
   spec.summary       = 'Workday calculator'
   spec.description   = 'Simple yet effective gem for calculating workday Time objects.'
   spec.homepage      = 'https://github.com/toughbyte/work_calendar'
-  spec.license       = 'MIT'
+  spec.license       = 'Toughbyte Ltd.'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/toughbyte/work_calendar'
