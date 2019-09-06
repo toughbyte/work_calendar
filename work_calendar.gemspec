@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary       = 'Workday calculator'
   spec.description   = 'Simple yet effective gem for calculating workday Time objects.'
   spec.homepage      = 'https://github.com/toughbyte/work_calendar'
-  spec.license       = 'Toughbyte Ltd.'
+  spec.license       = 'MIT'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/toughbyte/work_calendar'
