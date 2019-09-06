@@ -32,10 +32,10 @@ Get next `n`'th workday date relative to specified date; if no `date` parameter 
 WorkCalendar.next_workday(n, date)
 ```
 
-Get previous workdate relative to specified date; if no `date` parameter was passed, it returns value relative to current day.
+Works same way as `next_workday` method, only looking backwards.
 
 ```ruby
-WorkCalendar.prev_workday(date)
+WorkCalendar.prev_workday(n, date)
 ```
 
 ## License
