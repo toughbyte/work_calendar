@@ -23,7 +23,8 @@ class WorkCalendarTest < Minitest::Test
   end
 
   def test_prev_workday_method
-    assert_equal WorkCalendar.prev_workday(Date.new(2019, 5, 6)), Date.new(2019, 4, 30)
-    assert_equal WorkCalendar.prev_workday(Date.new(2019, 5, 7)), Date.new(2019, 5, 6)
+    assert_equal WorkCalendar.prev_workday(1, Date.new(2019, 5, 6)), Date.new(2019, 4, 30)
+    assert_equal WorkCalendar.prev_workday(1, Date.new(2019, 5, 7)), Date.new(2019, 5, 6)
+    assert_equal WorkCalendar.prev_workday(2, Date.new(2019, 5, 7)), Date.new(2019, 4, 30)
   end
 end

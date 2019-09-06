@@ -71,10 +71,9 @@ module WorkCalendar
       date
     end
 
-    def prev_workday(date = Time.zone.today)
-      prev_date = date - 1.day
-      prev_date -= 1.day until workday? prev_date
-      prev_date
+    def prev_workday(num = 1, date = Time.zone.today)
+      num.times { date = _prev_workday(date) }
+      date
     end
 
     private
@@ -83,6 +82,12 @@ module WorkCalendar
       next_date = date + 1.day
       next_date += 1.day until workday? next_date
       next_date
+    end
+
+    def _prev_workday(date)
+      prev_date = date - 1.day
+      prev_date -= 1.day until workday? prev_date
+      prev_date
     end
   end
 end
