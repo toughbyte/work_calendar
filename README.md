@@ -38,6 +38,13 @@ Works same way as `next_workday` method, only looking backwards.
 WorkCalendar.prev_workday(n, date)
 ```
 
+Get first/last day since specified date
+
+```ruby
+WorkCalendar.first_workday_since(date)
+WorkCalendar.last_workday_since(date)
+```
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

@@ -76,6 +76,18 @@ module WorkCalendar
       date
     end
 
+    def first_workday_since(date = Time.zone.today)
+      return date if workday?(date)
+
+      _next_workday(date)
+    end
+
+    def last_workday_since(date = Time.zone.today)
+      return date if workday?(date)
+
+      _prev_workday(date)
+    end
+
     private
 
     def _next_workday(date)
