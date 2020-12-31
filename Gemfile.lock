@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    work_calendar (1.0.0)
+    work_calendar (1.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -52,4 +52,4 @@ DEPENDENCIES
   work_calendar!
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
