@@ -47,6 +47,26 @@ module WorkCalendar
       11 => {
         holidays: [4]
       }
+    },
+    2021 => {
+      1 => {
+        holidays: [1, 4, 5, 6, 7, 8]
+      },
+      2 => {
+        holidays: [23]
+      },
+      3 => {
+        holidays: [8]
+      },
+      5 => {
+        holidays: [3, 10]
+      },
+      6 => {
+        holidays: [14]
+      },
+      11 => {
+        holidays: [4]
+      }
     }
   }.freeze
 
