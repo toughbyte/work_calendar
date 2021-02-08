@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    work_calendar (1.0.1)
+    work_calendar (1.0.2)
 
 GEM
   remote: https://rubygems.org/

@@ -53,7 +53,8 @@ module WorkCalendar
         holidays: [1, 4, 5, 6, 7, 8]
       },
       2 => {
-        holidays: [23]
+        workdays: [20],
+        holidays: [22, 23]
       },
       3 => {
         holidays: [8]
@@ -65,7 +66,10 @@ module WorkCalendar
         holidays: [14]
       },
       11 => {
-        holidays: [4]
+        holidays: [4, 5]
+      },
+      12 => {
+        holidays: [31]
       }
     }
   }.freeze
