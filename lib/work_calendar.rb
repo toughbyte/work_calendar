@@ -71,6 +71,27 @@ module WorkCalendar
       12 => {
         holidays: [31]
       }
+    },
+    2022 => {
+      1 => {
+        holidays: [3, 4, 5, 6, 7]
+      },
+      2 => {
+        holidays: [23]
+      },
+      3 => {
+        workdays: [5],
+        holidays: [7, 8]
+      },
+      5 => {
+        holidays: [2, 3, 9, 10]
+      },
+      6 => {
+        holidays: [13]
+      },
+      11 => {
+        holidays: [4]
+      }
     }
   }.freeze
 
