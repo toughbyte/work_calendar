@@ -93,6 +93,26 @@ module WorkCalendar
         holidays: [4]
       }
     }
+    2023 => {
+      1 => {
+        holidays: [2, 3, 4, 5, 6]
+      },
+      2 => {
+        holidays: [23, 24]
+      },
+      3 => {
+        holidays: [8]
+      },
+      5 => {
+        holidays: [1, 8, 9]
+      },
+      6 => {
+        holidays: [12]
+      },
+      11 => {
+        holidays: [6]
+      }
+    }
   }.freeze
 
   class << self
