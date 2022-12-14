@@ -5,11 +5,11 @@ require 'test_helper'
 class RubocopTest < Minitest::Test
   def initialize(name)
     super(name)
-    modified = `git diff master --name-only`
-    untracked = `git ls-files --others --exclude-standard`
+    modified = `git diff master --name-only origin/master '*.rb'`
+    untracked = `git ls-files --others --exclude-standard '*.rb'`
     excluded = Dir.glob('bin/*')
     files = (modified.split("\n") + untracked.split("\n") - excluded).join(' ')
-    @report = files.blank? ? '' : `bundle exec rubocop #{files} -a`
+    @report = files.blank? ? '' : `rubocop #{files}`
   end
 
   def test_with_rubocop
