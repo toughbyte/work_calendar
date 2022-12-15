@@ -92,7 +92,7 @@ module WorkCalendar
       11 => {
         holidays: [4]
       }
-    }
+    },
     2023 => {
       1 => {
         holidays: [2, 3, 4, 5, 6]
