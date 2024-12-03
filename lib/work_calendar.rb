@@ -141,6 +141,24 @@ module WorkCalendar
         workdays: [28],
         holidays: [30, 31]
       }
+    },
+    2025 => {
+      1 => {
+        holidays: [1, 2, 3, 6, 7, 8]
+      },
+      5 => {
+        holidays: [1, 2, 8, 9]
+      },
+      6 => {
+        holidays: [12, 13]
+      },
+      11 => {
+        workdays: [1],
+        holidays: [3, 4]
+      },
+      12 => {
+        holidays: [31]
+      }
     }
   }.freeze
 
